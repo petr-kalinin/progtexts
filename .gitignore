@@ -1,3 +1,20 @@
+## tasks and answers
+*.ans
+*.tsk
+*.hnt
+*.dup
+
+# metapost
+*.1
+*.2
+*.3
+*.4
+*.5
+*.6
+*.7
+*.8
+*.9
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -10,9 +27,9 @@
 ## Intermediate documents:
 *.dvi
 # these rules might exclude image files for figures etc.
-# *.ps
+*.ps
 # *.eps
-# *.pdf
+*.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
