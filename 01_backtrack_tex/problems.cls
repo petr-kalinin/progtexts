@@ -48,11 +48,11 @@
 
 
 % AK: думаю, лучше везде использовать вариант "".
-\declare@shorthand{russian}{""}{\nobreak\hskip.2em\ignorespaces}
-\declare@shorthand{russian}{",}{\nobreak\hskip.2em\ignorespaces}
+%\declare@shorthand{russian}{""}{\nobreak\hskip.2em\ignorespaces}
+%\declare@shorthand{russian}{",}{\nobreak\hskip.2em\ignorespaces}
 % KAP: чтобы кавычки всегда были правильные
-\declare@shorthand{russian}{"<}{<<}
-\declare@shorthand{russian}{">}{>>}
+%\declare@shorthand{russian}{"<}{<<}
+%\declare@shorthand{russian}{">}{>>}
 %---------- From package "lastpage" ------------------
 \def\lastpage@putlabel{\addtocounter{page}{-1}%
    \immediate\write\@auxout{\string\newlabel{LastPage}{{}{\thepage}}}%
