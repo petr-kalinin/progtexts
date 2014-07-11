@@ -81,7 +81,7 @@
 }
 
 {\makerusother
-\gdef\deftaskname{á†§†≠®•}
+\gdef\deftaskname{–ó–∞–¥–∞–Ω–∏–µ}
 }
 
 \def\task{\taskn{\deftaskname}}
@@ -89,18 +89,18 @@
 \def\taskcaption#1{\textbf{#1}}
 
 \long\def\answer#1#2{
-\par\pagebreak[3]\mbox{\taskcaption{#1} (·‚‡. #2):}
+\par\pagebreak[3]\mbox{\taskcaption{#1} (—Å—Ç—Ä. #2):}
 }
 
 \def\inputanswers{%
 \immediate\closeout\tsk
 \immediate\closeout\hnt
 \immediate\closeout\ans
-\eject\header{ì·´Æ¢®Ô ¢·•Â ß†§†Á}
+\eject\header{–£—Å–ª–æ–≤–∏—è –≤—Å–µ—Ö –∑–∞–¥–∞—á}
 \input{\jobname.tsk}
-\eject\header{èÆ§·™†ß™®}
+\eject\header{–ü–æ–¥—Å–∫–∞–∑–∫–∏}
 \input{\jobname.hnt}
-\eject\header{é‚¢•‚Î}
+\eject\header{–û—Ç–≤–µ—Ç—ã}
 \input{\jobname.ans}
 }
 
