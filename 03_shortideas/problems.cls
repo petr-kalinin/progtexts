@@ -16,8 +16,8 @@
 
 \hfuzz=0.1cm
 
-% Опцию a4paper будем использовать для формата, в котором задачки
-% печатались раньше на бумаге A4.
+% ╨Ю╨┐╤Ж╨╕╤О a4paper ╨▒╤Г╨┤╨╡╨╝ ╨╕╤Б╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╤В╤М ╨┤╨╗╤П ╤Д╨╛╤А╨╝╨░╤В╨░, ╨▓ ╨║╨╛╤В╨╛╤А╨╛╨╝ ╨╖╨░╨┤╨░╤З╨║╨╕
+% ╨┐╨╡╤З╨░╤В╨░╨╗╨╕╤Б╤М ╤А╨░╨╜╤М╤И╨╡ ╨╜╨░ ╨▒╤Г╨╝╨░╨│╨╡ A4.
 \DeclareOption{a4paper}{
  \PassOptionsToPackage{a4paper,includehead,includefoot,headheight=10pt,headsep=2mm,width=17cm,height=27cm,footskip=0.5cm}{geometry}
 }
@@ -29,7 +29,7 @@
 \LoadClass[a4paper]{article}
 
 \RequirePackage[T2A]{fontenc}
-\RequirePackage[cp866]{inputenc}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage{mathtext}
 \RequirePackage[english,russian]{babel}
 \RequirePackage[dvips,final]{graphicx}
@@ -47,10 +47,10 @@
 \raggedbottom
 
 
-% AK: думаю, лучше везде использовать вариант "".
+% AK: ╨┤╤Г╨╝╨░╤О, ╨╗╤Г╤З╤И╨╡ ╨▓╨╡╨╖╨┤╨╡ ╨╕╤Б╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╤В╤М ╨▓╨░╤А╨╕╨░╨╜╤В "".
 %\declare@shorthand{russian}{""}{\nobreak\hskip.2em\ignorespaces}
 %\declare@shorthand{russian}{",}{\nobreak\hskip.2em\ignorespaces}
-% KAP: чтобы кавычки всегда были правильные
+% KAP: ╤З╤В╨╛╨▒╤Л ╨║╨░╨▓╤Л╤З╨║╨╕ ╨▓╤Б╨╡╨│╨┤╨░ ╨▒╤Л╨╗╨╕ ╨┐╤А╨░╨▓╨╕╨╗╤М╨╜╤Л╨╡
 %\declare@shorthand{russian}{"<}{<<}
 %\declare@shorthand{russian}{">}{>>}
 %---------- From package "lastpage" ------------------
@@ -69,7 +69,7 @@
 \newcounter{headercount}
 \renewcommand{\theheadercount}{\Roman{headercount}}
 \newcommand{\header}[1]{%
-\refstepcounter{headercount}\headernono{Часть \Roman{headercount}. #1}
+\refstepcounter{headercount}\headernono{╨з╨░╤Б╤В╤М \Roman{headercount}. #1}
 }
 
 \newcounter{lheadercount}[headercount]
@@ -104,7 +104,7 @@
 \hrule\vspace{0.1cm}%
 \hbox to \textwidth{%
 \sf\footnotesize%
-\hfill\strut Страница \thepage\ из \pageref{LastPage}\hfill%
+\hfill\strut ╨б╤В╤А╨░╨╜╨╕╤Ж╨░ \thepage\ ╨╕╨╖ \pageref{LastPage}\hfill%
 }}}
 
 \renewcommand{\leq}{\leqslant}
@@ -113,11 +113,11 @@
 
 \newcommand{\unit}[1]{\mbox{ \rm #1}}
 % \vstring#1
-%   Написать #1 как строку вх/вых файла (в кавычках шрифтом \tt без 
-%   переносов)
+%   ╨Э╨░╨┐╨╕╤Б╨░╤В╤М #1 ╨║╨░╨║ ╤Б╤В╤А╨╛╨║╤Г ╨▓╤Е/╨▓╤Л╤Е ╤Д╨░╨╣╨╗╨░ (╨▓ ╨║╨░╨▓╤Л╤З╨║╨░╤Е ╤И╤А╨╕╤Д╤В╨╛╨╝ \tt ╨▒╨╡╨╖ 
+%   ╨┐╨╡╤А╨╡╨╜╨╛╤Б╨╛╨▓)
 \newcommand*{\vstring}[1]{`\mbox{\tt#1}'}
 
-%БАГ: пока не работает генерация автоматических ссылок на пункты перечня
+%╨С╨Р╨У: ╨┐╨╛╨║╨░ ╨╜╨╡ ╤А╨░╨▒╨╛╤В╨░╨╡╤В ╨│╨╡╨╜╨╡╤А╨░╤Ж╨╕╤П ╨░╨▓╤В╨╛╨╝╨░╤В╨╕╤З╨╡╤Б╨║╨╕╤Е ╤Б╤Б╤Л╨╗╨╛╨║ ╨╜╨░ ╨┐╤Г╨╜╨║╤В╤Л ╨┐╨╡╤А╨╡╤З╨╜╤П
 \newcounter{tmp}
 
 \newenvironment{ulists}[2]{%
@@ -148,7 +148,7 @@
 }
 {\end{ulists}}
 
-% Нумерованный список с сквозной нумерацией
+% ╨Э╤Г╨╝╨╡╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╤Б╨┐╨╕╤Б╨╛╨║ ╤Б ╤Б╨║╨▓╨╛╨╖╨╜╨╛╨╣ ╨╜╤Г╨╝╨╡╤А╨░╤Ж╨╕╨╡╨╣
 \newcounter{olistcount}\renewcommand{\theolistcount}{\arabic{olistcount}}
 \newcommand{\resetolist}{\setcounter{olistcount}{0}}
 \newenvironment{olistc}{%
@@ -157,9 +157,9 @@
 }
 {\end{ulists}}
 
-% Нумерованный список для использования в тексте, когда каждый пункт 
-% пишется с маленькой буквы и отделяется ";".
-% Здесь помечается арабской цифрой со скобкой.
+% ╨Э╤Г╨╝╨╡╤А╨╛╨▓╨░╨╜╨╜╤Л╨╣ ╤Б╨┐╨╕╤Б╨╛╨║ ╨┤╨╗╤П ╨╕╤Б╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╨╜╨╕╤П ╨▓ ╤В╨╡╨║╤Б╤В╨╡, ╨║╨╛╨│╨┤╨░ ╨║╨░╨╢╨┤╤Л╨╣ ╨┐╤Г╨╜╨║╤В 
+% ╨┐╨╕╤И╨╡╤В╤Б╤П ╤Б ╨╝╨░╨╗╨╡╨╜╤М╨║╨╛╨╣ ╨▒╤Г╨║╨▓╤Л ╨╕ ╨╛╤В╨┤╨╡╨╗╤П╨╡╤В╤Б╤П ";".
+% ╨Ч╨┤╨╡╤Б╤М ╨┐╨╛╨╝╨╡╤З╨░╨╡╤В╤Б╤П ╨░╤А╨░╨▒╤Б╨║╨╛╨╣ ╤Ж╨╕╤Д╤А╨╛╨╣ ╤Б╨╛ ╤Б╨║╨╛╨▒╨║╨╛╨╣.
 \newenvironment{tllist}{%
 \setcounter{tmp}{0}
 \begin{ulists}{\refstepcounter{tmp}\thetmp)}{}%
@@ -183,17 +183,17 @@
 \newcommand{\SHR}{\mathop{\mathrm{shr}}}
 
 
-% Суммарная ширина столбцов в двухколоночной таблице, выровненной по ширине
+% ╨б╤Г╨╝╨╝╨░╤А╨╜╨░╤П ╤И╨╕╤А╨╕╨╜╨░ ╤Б╤В╨╛╨╗╨▒╤Ж╨╛╨▓ ╨▓ ╨┤╨▓╤Г╤Е╨║╨╛╨╗╨╛╨╜╨╛╤З╨╜╨╛╨╣ ╤В╨░╨▒╨╗╨╕╤Ж╨╡, ╨▓╤Л╤А╨╛╨▓╨╜╨╡╨╜╨╜╨╛╨╣ ╨┐╨╛ ╤И╨╕╤А╨╕╨╜╨╡
 \newlength\twowidth
 \newcommand{\settwowidth}{
 \twowidth=\textwidth
 \addtolength\twowidth{-4\tabcolsep}
 \addtolength\twowidth{-3\arrayrulewidth}
 }
-\AtBeginDocument{\settwowidth}%т.к. \textwidth надо сначала установить
+\AtBeginDocument{\settwowidth}%╤В.╨║. \textwidth ╨╜╨░╨┤╨╛ ╤Б╨╜╨░╤З╨░╨╗╨░ ╤Г╤Б╤В╨░╨╜╨╛╨▓╨╕╤В╤М
 
-% --= поддержка примеров программ, сделаных conv.pas =--
-% Это для борьбы с разрывами страницы после окружений multicols
+% --= ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨║╨░ ╨┐╤А╨╕╨╝╨╡╤А╨╛╨▓ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝, ╤Б╨┤╨╡╨╗╨░╨╜╤Л╤Е conv.pas =--
+% ╨н╤В╨╛ ╨┤╨╗╤П ╨▒╨╛╤А╤М╨▒╤Л ╤Б ╤А╨░╨╖╤А╤Л╨▓╨░╨╝╨╕ ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л ╨┐╨╛╤Б╨╗╨╡ ╨╛╨║╤А╤Г╨╢╨╡╨╜╨╕╨╣ multicols
 \newlength{\cs@topskip}
 \newlength{\cs@bottom}
 \newlength{\cs@bottomback}
@@ -204,14 +204,14 @@
 \footnotesize\cs@top=2.4ex\normalsize
 
 \newenvironment{codesamplec}[1]
-{% локальные определения:
+{% ╨╗╨╛╨║╨░╨╗╤М╨╜╤Л╨╡ ╨╛╨┐╤А╨╡╨┤╨╡╨╗╨╡╨╜╨╕╤П:
 \newcommand{\codelf}{\kern-1.5em\\}%
 \newcommand{\codespace}{{\ttfamily\symbol{`\ }}}%
 \newcommand{\codetok}[1]{{\bfseries##1}}%
 \newcommand{\codecmt}[1]{{\ttfamily\slshape##1}}%
 \vspace{0.5ex plus 0.3ex minus 0.1ex}
-\topskip=\cs@topskip%KAP: не знаю почему, но работает :):):) !!! От этого параметра зависимость --- пороговая. Пришлось еще подрегулировать \vspace строкой ниже
-%KAP: тут где-то еще видимо затесался vspace с plus/minus компонентой, так что, если сильно ужимать страницу, то все переедет...
+\topskip=\cs@topskip%KAP: ╨╜╨╡ ╨╖╨╜╨░╤О ╨┐╨╛╤З╨╡╨╝╤Г, ╨╜╨╛ ╤А╨░╨▒╨╛╤В╨░╨╡╤В :):):) !!! ╨Ю╤В ╤Н╤В╨╛╨│╨╛ ╨┐╨░╤А╨░╨╝╨╡╤В╤А╨░ ╨╖╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╤М --- ╨┐╨╛╤А╨╛╨│╨╛╨▓╨░╤П. ╨Я╤А╨╕╤И╨╗╨╛╤Б╤М ╨╡╤Й╨╡ ╨┐╨╛╨┤╤А╨╡╨│╤Г╨╗╨╕╤А╨╛╨▓╨░╤В╤М \vspace ╤Б╤В╤А╨╛╨║╨╛╨╣ ╨╜╨╕╨╢╨╡
+%KAP: ╤В╤Г╤В ╨│╨┤╨╡-╤В╨╛ ╨╡╤Й╨╡ ╨▓╨╕╨┤╨╕╨╝╨╛ ╨╖╨░╤В╨╡╤Б╨░╨╗╤Б╤П vspace ╤Б plus/minus ╨║╨╛╨╝╨┐╨╛╨╜╨╡╨╜╤В╨╛╨╣, ╤В╨░╨║ ╤З╤В╨╛, ╨╡╤Б╨╗╨╕ ╤Б╨╕╨╗╤М╨╜╨╛ ╤Г╨╢╨╕╨╝╨░╤В╤М ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Г, ╤В╨╛ ╨▓╤Б╨╡ ╨┐╨╡╤А╨╡╨╡╨┤╨╡╤В...
 \par\begin{multicols}{#1}[\footnotesize\hrule\nopagebreak\vspace{-\cs@top}]\tt\noindent}
 {\end{multicols}\par\vspace*{-\cs@bottom}\hrule\vspace*{\cs@bottomback}\pagebreak[0]}
 
@@ -225,7 +225,7 @@
 % --= * =--
 
 \newcommand{\noten}[2]{{\vspace{0.1cm}\par\pagebreak[3]\small \textit{#1:} #2 \vspace{0.1cm plus 0.1cm}\par}}
-\newcommand{\note}[1]{\noten{Примечание}{#1}}
+\newcommand{\note}[1]{\noten{╨Я╤А╨╕╨╝╨╡╤З╨░╨╜╨╕╨╡}{#1}}
 
 \newcommand{\eps}{\varepsilon}
 
@@ -245,11 +245,11 @@
 \refstepcounter{taskcount}%
 \textbf{#1\mbox{~}\thetaskcount:} {\it #2}%
 }
-\newcommand{\tasko}[1]{\taskon{Задание}{#1}}
+\newcommand{\tasko}[1]{\taskon{╨Ч╨░╨┤╨░╨╜╨╕╨╡}{#1}}
 
-\newcommand{\hint}[2]{\textbf{Посказка \ref{#1}:} #2}
+\newcommand{\hint}[2]{\textbf{╨Я╨╛╤Б╨║╨░╨╖╨║╨░ \ref{#1}:} #2}
 
-\newcommand{\answer}[2]{\textbf{Ответ \ref{#1}:} #2}
+\newcommand{\answer}[2]{\textbf{╨Ю╤В╨▓╨╡╤В \ref{#1}:} #2}
 
 \renewcommand{\ddots}{\,\,.\,.\,\,}
 
@@ -335,7 +335,7 @@
 }
 
 {\makerusother
-\gdef\deftaskname{Задание}
+\gdef\deftaskname{╨Ч╨░╨┤╨░╨╜╨╕╨╡}
 }
 
 \def\task{\taskn{\deftaskname}}
@@ -343,18 +343,18 @@
 \def\taskcaption#1{\textbf{#1}}
 
 \long\def\answer#1#2{
-\par\pagebreak[3]\mbox{\taskcaption{#1} (стр. #2):}
+\par\pagebreak[3]\mbox{\taskcaption{#1} (╤Б╤В╤А. #2):}
 }
 
 \def\inputanswers{%
 \immediate\closeout\tsk
 \immediate\closeout\hnt
 \immediate\closeout\ans
-\eject\header{Условия всех задач}
+\eject\header{╨г╤Б╨╗╨╛╨▓╨╕╤П ╨▓╤Б╨╡╤Е ╨╖╨░╨┤╨░╤З}
 \input{\jobname.tsk}
-\eject\header{Подсказки}
+\eject\header{╨Я╨╛╨┤╤Б╨║╨░╨╖╨║╨╕}
 \input{\jobname.hnt}
-\eject\header{Ответы}
+\eject\header{╨Ю╤В╨▓╨╡╤В╤Л}
 \input{\jobname.ans}
 }
 
