@@ -74,9 +74,13 @@
 
 \newcounter{lheadercount}[headercount]
 \renewcommand{\thelheadercount}{\theheadercount.\arabic{lheadercount}}
-\newcommand{\lheader}[1]{%
+
+\newcommand{\lheadernd}[1]{%
 \par\pagebreak[3]\vspace{0.5ex plus1ex}%
-\refstepcounter{lheadercount}{\bf \arabic{lheadercount}. #1.}%
+\refstepcounter{lheadercount}{\bf \arabic{lheadercount}. #1}%
+}
+\newcommand{\lheader}[1]{%
+\lheadernd{#1.}%
 }
 
 \newcommand{\Header}[1]{%
