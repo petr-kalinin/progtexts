@@ -99,7 +99,7 @@ for j:=1 to n do
        if was[j]=0 then begin
           t:=find(j,d+1);
           if t<min then
-             t:=min;
+             min:=t;
        end else begin
            if was[j]<min then
               min:=was[j];
@@ -156,7 +156,7 @@ for j:=1 to n do
        if was[j]=0 then begin
           t:=find(j,d+1);
           if t<min then
-             t:=min;
+             min:=t;
           if t>=d then
              ok:=true;
        end else begin
