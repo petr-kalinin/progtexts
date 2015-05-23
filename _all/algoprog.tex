@@ -1,9 +1,19 @@
 \documentclass[a4paper,10pt]{problems}
+\usepackage{import}
 
 \begin{document}
 
+\vbox to\textheight{
+\thispagestyle{empty}
+\vfill\vfill
+\begin{center}
+\Huge\bf\textsf{Заметки\\ по алгоритмическому программированию}
+\end{center}
+
+\vfill
+
 \begin{flushright}
-Автор: Петр Калинин, основной текст: 2008\\
+Автор: Петр Калинин, 2008--2015\\
 Этот документ можно распространять по лицензии\\
 Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)\\
 Последнюю версию, а также исходный код для системы \LaTeX\\
@@ -11,7 +21,12 @@ Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)\\
 \includegraphics[width=2cm]{by-sa-corr.eps}
 \end{flushright}
 
-\input{01_backtrack_main.tex}
+\vfill\vfill
+}
+
+\tableofcontents
+
+\import{../01_backtrack/}{01_backtrack_main.tex}
 
 \inputanswers
 
