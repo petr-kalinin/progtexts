@@ -34,7 +34,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[russian]{babel}
 \RequirePackage{mathtext}
-\RequirePackage[dvips,final]{graphicx}
+\RequirePackage[dvipdfmx,final]{graphicx}
 \RequirePackage{wrapfig}
 \RequirePackage{amssymb}
 \RequirePackage{amsmath}
@@ -79,13 +79,13 @@
 \section{#1}
 }
 
-\titleformat{\subsection}[hang]{\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsection}[hang]{\normalfont\normalsize\sf\bfseries}{\thesubsection.}{1em}{}
 \titlespacing{\subsection}{0em}{0.5em}{0em}
 \newcommand{\lheadernd}[1]{%
 \subsection{#1}%
 }
 \newcommand{\lheader}[1]{%
-\subsection{#1.}%
+\subsection{#1}%
 }
 
 \newcommand{\Header}[1]{%
