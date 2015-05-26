@@ -63,7 +63,7 @@
 %---------- end of "lastpage" ------------------
 
 \titlelabel{\thetitle.\quad}
-\titleformat{\chapter}{\Huge\sf\bfseries}{\chaptertitlename{} \thechapter.}{1em}{}
+\titleformat{\chapter}[display]{\Huge\sf\bfseries}{\chaptertitlename{} \thechapter.}{1em}{}
 \assignpagestyle{\chapter}{fancy}
 \addto\captionsrussian{%
 \def\chaptername{Часть}%
