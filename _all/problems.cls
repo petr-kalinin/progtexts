@@ -88,8 +88,16 @@
 \subsection{#1}%
 }
 
-\newcommand{\Header}[1]{%
-\chapter{#1}
+\newcommand{\Headern}[1]{%
+\endgroup
+\chapter{#1}%
+\immediate\write\tsk{\noexpand\lheader{#1}}
+\immediate\write\hnt{\noexpand\lheader{#1}}
+\immediate\write\ans{\noexpand\lheader{#1}}
+}
+
+\newcommand{\Header}{%
+\begingroup\makerusother\Headern
 }
 
 \setcounter{secnumdepth}{3}
