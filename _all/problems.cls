@@ -92,6 +92,8 @@
 \chapter{#1}
 }
 
+\setcounter{secnumdepth}{3}
+\titleformat{\subsubsection}[runin]{\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
 \newcommand{\llheader}{%
 \subsubsection{}
 }
