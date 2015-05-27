@@ -101,7 +101,8 @@ C/C++). Конец части про эти четыре ключа.
 \textbf{Ключ} \verb|$B| влияет на обработку выражений типа
 \begin{codesampleo}\begin{verbatim}
 if (n>0)and(f(n)>0) then
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 т.е. когда у вас в if два или более условий, связанных оператором or или and. В таком случае после 
 вычисления первого условия может оказаться, что от значения второго условия ничего не зависит 
 (например, в приведённом примере: если $n\leq0$, то проверять $f(n)$ незачем: в любом случае if не 
@@ -118,7 +119,8 @@ if (n>0)and(f(n)>0) then
 \begin{codesample}\begin{verbatim}
 if (n>0)and(n<maxn)and(a[n]=k) then
 if (x>=0)and(sqrt(x)<y) then
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 Можете подумать, какие тут возникнут проблемы, если этот код будет скомпилирован с \verb|$B+|.
 
 \textbf{Ключ} \verb|$A| влияет на так называемое <<выравнивание>> (alignment). Современные 

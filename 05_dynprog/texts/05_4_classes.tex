@@ -99,7 +99,8 @@ end else begin
     out(i-2,k-ans[i-1]);
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 На месте многоточия, конечно, должна быть обработка особых случаев. Её, конечно, делаем в лоб,
 и, как и раньше, она упрощается, если ввести нулевые элементы:
@@ -121,7 +122,8 @@ end else begin
     out(i-2,k-ans[i-1]);
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Ещё раз напоминаю, что здесь подразумевается, что всегда $1\leq k\leq ans[i]$. Подумайте,
 почему, если из внешней программы мы вызвали процедуру $out$ правильно, то и при всех 
 рекурсивных вызовах это свойство сохранится.
@@ -174,7 +176,8 @@ for g:=1 to ng do
        out(ii,k);
        break;
     end else k:=k-nans[g];
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Здесь (очень условно!) написано следующее. $g$ "--- это номер очередной группы, $ng$ "--- их
 общее количество, $nans$ "--- количество решений в этой группе. В реальной программе у вас
 почти наверняка обозначения будут другие и даже способ организации цикла может быть другим.
@@ -224,7 +227,8 @@ if a[n-i+1]=0 then
    getnum:=getnum(i-1)
 else getnum:=ans[i-1]+getnum(i-2)
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Надеюсь, что правильно :)
 
 Кстати, тут тоже, аналогично задачам \ref{tortoise:firstlex}, \ref{tortoise:kth} и 
@@ -264,7 +268,8 @@ if ans[k]='R' then
 end else 
     getnum:=ans[i+1,j]+getnum(i,j+1,k+1);
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Ещё обратите внимание на следующий момент: когда вы только услышали такую задачу, может показаться, 
 что тут есть какие"=нибудь идеи, методы решения, специфические только для этой задачи (например, 
 какая"=нибудь игра с $C_n^k$, а в задании \ref{01:numberbyseq} "--- с числами Фиббоначчи). Нет!

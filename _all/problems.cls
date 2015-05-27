@@ -45,6 +45,9 @@
 \RequirePackage[dvips]{geometry}
 \RequirePackage{titlesec}
 \RequirePackage{fancyhdr}
+\RequirePackage{framed}
+\RequirePackage{verbatim}
+
 % Main Code
 \columnseprule=0.4pt
 \raggedbottom
@@ -88,9 +91,20 @@
 \subsection{#1}%
 }
 
+\newcommand\Headerproper[1]{
+\chapter{#1}
+}
+
 \newcommand{\Headern}[1]{%
 \endgroup
-\chapter{#1}%
+\immediate\openout\dup=\jobname.dup\relax%
+\immediate\write\dup{#1}%
+\immediate\closeout\dup%
+\newread\dupread
+\openin\dupread=\jobname.dup\relax
+\read\dupread to\fileline 
+\closein\dupread
+\Headerproper{\fileline}%
 \immediate\write\tsk{\noexpand\lheader{#1}}
 \immediate\write\hnt{\noexpand\lheader{#1}}
 \immediate\write\ans{\noexpand\lheader{#1}}
@@ -368,7 +382,7 @@
 \immediate\closeout\hnt
 \immediate\closeout\ans
 \appendix
-\Header{Задачи и ответы}
+\Headerproper{Задачи и ответы}
 \header{Условия всех задач}
 \input{\jobname.tsk}
 \eject\header{Подсказки}

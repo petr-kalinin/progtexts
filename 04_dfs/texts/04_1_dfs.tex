@@ -14,7 +14,8 @@ for j:=1 to n do
     if (gr[i,j]=1)and(was[j]=0) then
        find(j);
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Здесь $gr$ "--- матрица смежности, $was$ "--- тот самый массив, в котором мы храним, были мы уже в 
 этой вершине или нет ещё.
 
@@ -32,7 +33,8 @@ for j:=1 to n do
     if gr[i,j]=1 then
        find(j);
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 (обратите внимание, что, конечно, проверка из $was[j]$ превратилась в $was[i]$).
 
 Смысл такого переноса проверок в общем случае рекурсивных процедур (в первую очередь в случае 
@@ -67,7 +69,8 @@ end;
 for i:=1 to n do
     if was[i]=0 then
        find(i);
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Конечно, если сам поиск написан вторым способом (т.е. с проверкой $was$ при входе в процедуру), то 
 if из этого кода можно убрать.
 

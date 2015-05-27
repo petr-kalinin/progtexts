@@ -47,7 +47,8 @@ if ok then
    writeln(f,'Negative cycles exist')
 else writeln(f,'No negative cycles');
 end.
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Попробуем определить, сколько времени займёт выполнение этой программы. 
 Очевидно, что, прежде чем дать точный ответ на этот вопрос, надо решить 
@@ -253,7 +254,8 @@ for i:=1 to n do
     for j:=i+1 to n do begin
         ...
     end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 Общее количество выполнения внутренней части цикла будет 
 $(n-1)+(n-2)+\dots+2+1\hm=n(n-1)/2\hm=n^2/2-n/2\hm=O(n^2)$, т.к. выражение является полиномом второй 
 степени. Очевидно, что время выполнения всех остальных операций в этом цикле будет не больше, 
@@ -268,7 +270,8 @@ for i:=1 to n do
             for l:=k+1 to n do begin
                 ...
             end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 Точную формулу количества операций получить, может быть, нетривиально, но ясно, 
 что будет полином четвёртой степени, поэтому все равно $O(n^4)$. Конечно, такая 
 программа работает быстрее, чем если бы все циклы были от 1 до $n$, но на асимптотику это не влияет (см. ещё ниже).
@@ -277,7 +280,8 @@ for i:=1 to n do
 for i:=1 to n do
     for j:=1 to round(sqrt(n)) do
         ...
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Сложность $O(n\sqrt{n})$. На самом деле корни в сложности встречаются нечасто, обычно только 
 во всяких задачах на проверку чисел на простоту, а также в условно называемой эвристике 
 $\sqrt{n}$. Обратите также внимание, что всякие округления 
@@ -292,7 +296,8 @@ for i:=1 to n do begin
           ...
           inc(j);
     end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Абсолютно аналогично предыдущему.
 
 \begin{codesampleo}\begin{verbatim}
@@ -300,7 +305,8 @@ while n>0 do begin
       ...
       n:=n div 2;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Количество итераций цикла будет $\log_2 n$ плюс-минус несколько. 
 Поэтому сложность $O(\log n)$. Замечу, что, как известно (может, вы и не 
 знаете, но все равно это так) логарифмы по разным основаниям отличаются в 
@@ -313,7 +319,8 @@ $\log_a b$ и \textit{не} зависит от $n$, поэтому $O(\log_a n)
 \begin{codesampleo}\begin{verbatim}
 for i:=1 to n do ...
 for i:=1 to m do ...
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 Т.""е. два последовательных цикла, один до $n$, второй до $m$. Пока мы не знаем 
 соотношения на $n$ и $m$, будем считать, что это просто два отдельных параметра 
 задачи. В таком случае нас интересует уже время выполнения как функция 
@@ -409,7 +416,8 @@ for i:=1 to n do
                 вывести решение;
                 halt;
             end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 Если бы не было команды \texttt{halt;}, то вопросов не было бы: сложность 
 $O(n^4)$ и TL на тестах, в которых много одинаковых чисел. Но \texttt{halt;}, видимо, 
 меняет сложность до $O(n^2)$. Действительно, если длины все числа разные

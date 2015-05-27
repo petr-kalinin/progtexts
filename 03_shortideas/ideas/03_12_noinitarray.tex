@@ -32,7 +32,8 @@ for i:=1 to n do begin
     inc(a[x]);
     if a[x]>=4 then writeln(x);
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 Вроде все просто, только давайте оценим время работы этого алгоритма. На первый взгляд это просто: 
 $O(N)$, тут ведь простой цикл\dots Но! Не забудем про то, что массив $a$ надо изначально 
@@ -66,7 +67,8 @@ for j:=1 to k do begin
         if a[x]>=4 then writeln(x);
     end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 
 Но предположим, что его мы себе позволить не можем (например, $N\leq 100$, $M\leq 
@@ -158,7 +160,8 @@ $c[1]=10$, $c[2]=137$, $c[3]=1061$; остальные элементы $b$ и $
 оно встречалось, если
 \begin{codesampleo}\begin{verbatim}
 if (b[x]>0)and(b[x]<=nall)and(c[b[x]]=x)
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 (Сравнение с нулём добавлено ясно зачем; выше я его не упоминал просто для ясности).
 
@@ -205,7 +208,8 @@ for i:=1 to n do begin
     inc(a[x]);
     if a[x]>=4 then writeln(x);
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 Аналогично коду, приведённому в первом способе, тут опять появляется внутренний if, который 
 проверяет, верно ли, что считанное число "--- новое (обратите внимание, что появился not), и, если 

@@ -9,7 +9,8 @@ begin
 if b=0 then
    gcd:=a
 else gcd:=gcd(b,a mod b);
-end;\end{verbatim}\end{codesampleo}
+end;\end{verbatim}
+\end{codesampleo}
 
 Можно показать, что этот алгоритм работает за $O(\max(\log a,\log b))$. В частности, поэтому имеет 
 смысл поставить задачу поиска НОД \textit{длинных} чисел. Но, как только вы глянете на приведённый 

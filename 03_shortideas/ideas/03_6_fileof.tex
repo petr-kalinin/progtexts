@@ -32,7 +32,8 @@ assign(f,'input.dat');reset(f);
 read(f,a,b,c);
 close(f);
 end.
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 \noindent при этом из файла input.dat будут считаны первые шесть байт и напрямую записаны в память:
 первые два байта "--- по адресу переменной $a$, вторая пара байт "--- $b$, третья пара 
 байт "--- $c$.
@@ -63,13 +64,15 @@ begin
 assign(f,'input.dat');reset(f);
 read(f,d);
 ...
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 или
 \begin{codesampleo}\begin{verbatim}
 type tArr=array[1..30] of integer;
 var f:file of tArr;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 и т.п.
 
 \textbf{file.} Такой тип данных подразумевает, что файл состоит из некоторого количества 
@@ -93,7 +96,8 @@ begin
 assign(f,'input.dat');reset(f,sizeof(tData));
 blockread(f,d,10);
 ...
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Размер "<записи"> здесь делается равным размеру типа tData, поэтому команда blockread считывает 10 
 "<записей">, тем самым как раз заполняя весь массив d.
@@ -118,7 +122,8 @@ var f:file;
 assign(f,'input.dat');rewrite(f,2*sizeof(tData));
 blockwrite(f,d,5);
 ...
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 \begin{codesample}\begin{verbatim}
 type tData=record
              a,b,c:integer;
@@ -132,7 +137,8 @@ var f:file;
 assign(f,'input.dat');rewrite(f,1);
 blockwrite(f,d,sizeof(d));
 ...
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Обратите внимание на последнюю программу: здесь я указываю, что размер записи равен 1, и далее 
 просто указываю количество байт, сколько надо считать. ИМХО, так делать в большинстве случаев 
@@ -150,7 +156,8 @@ assign(f,'input.dat');reset(f,1);
 blockread(f,n,sizeof(n));
 blockread(f,d,n*sizeof(tData));
 ...
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 Таким образом можно хранить в бинарном файле данные совершенно разных типов вперемешку.
 
 Ещё раз подчёркиваю, что \textit{никаких} проверок blockread/blockwrite не делает, а тупо копирует 

@@ -8,7 +8,8 @@ for i:=1 to n do
        ans:=i;
        break;
     end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 или что"=нибудь подобное.
 
 Посмотрим, сколько времени оно занимает. $O(n)$, конечно, и ясно, что быстрее не получится, 
@@ -27,7 +28,8 @@ while a[i]<>k do
       inc(i);
 if i<>n+1 then
    ans:=i;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 (if вне цикла тут).
 
@@ -52,7 +54,8 @@ p:=@a;
 while p^<>k do
   inc(p);
 ...
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Вроде должно работать. Что я тут делаю. Есть указатель $p$ на текущий элемент массива. Изначально я 
 кладу в него адрес $a$, т.е. фактически первого элемента $a$. Команда inc, оказывается, умеет 

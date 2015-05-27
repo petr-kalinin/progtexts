@@ -26,7 +26,8 @@ for j:=0 to 30 do begin
     find(i+1);
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 Попробуем какие-нибудь ветки дерева решений поотсекать. Т.е. фактически надо, чтобы $find$ не рассматривало некоторые варианты $a[i]$, которые нам точно не интересны.
 
@@ -46,7 +47,8 @@ for j:=0 to 30 do if 1 shl j<=n-s then begin
     s:=s-a[i]; {Откатываем назад!!!}
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 Очевидно, что это тоже будет работать корректно (кстати, это ещё и исправляет баг с 
 переполнением в процедуре $check$, который обсуждался в части I). 
@@ -69,7 +71,8 @@ for j:=0 to 30 do  begin
     s:=s-a[i]; {Откатываем назад!!!}
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 т.е. вынести проверку в начало процедуры $find$. Теперь, если в некоторый момент мы взяли 
 $a[i]>n-s$, то мы попробуем такой вариант, войдём в $find(i+1)$, но тут же выйдем назад, т.к. $s\geq n$. Обратите внимание, что проверка стала нестрогой ($\geq$, а не $>$), т.к. я её переместил после проверки \texttt{if i>k}.
@@ -91,7 +94,8 @@ for j:=0 to 30 do  begin
     find(i+1,s+a[i]);
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 соответственно в главной программе вызываем $find(1,0)$;
 
@@ -110,7 +114,8 @@ for j:=0 to 30 do begin
     find(i+1,nn-a[i]);
 end;
 end;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 Обратите внимание, что здесь $find$ в главной программе вызываем $find(1,n)$.|
 
@@ -174,7 +179,8 @@ end else begin
     find(i+1,k-a[i]);
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Подумаем, как можно отсечь. По сути, наша цель "--- чтобы каждая ветка 
 заканчивалась нахождением решения. Подумаем, как может получиться так, что 
@@ -191,7 +197,8 @@ $k>(prev+1+prev+nn-i+1)\cdot(nn-i+1)/2$, то решений тоже точно
 \begin{codesampleo}\begin{verbatim}
 if (k<prev*(nn-i+1))or (k>(prev+1+prev+nn-i+1)*(nn-i+1) div 2) then
    exit; 
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 и окончательное решение (привожу на этот раз полную программу):
 \begin{codesample}\begin{verbatim}
 {$A+,B-,D+,E+,F-,G-,I+,L+,N+,O-,P-,Q+,R+,S+,T-,V-,X+,Y+}
@@ -273,7 +280,8 @@ res:=count(n-1,m)+2*count(n,m)+count(n+1,m);
 Для этого и стоит проверка if n>0 в функции count}
 writeln(res);
 end.
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Можете потестить это решение. На тесте, на котором самый большой ответ при ограничениях $n,m\leq 100$ (видимо, 
 $n=27$, $m=100$) оно у меня работает секунды три, при том, что динамика 
@@ -320,7 +328,8 @@ if n>0 then begin
        find(1,m);
    end;
 count:=ans;
-\end{verbatim}\end{codesampleo}
+\end{verbatim}
+\end{codesampleo}
 
 Можно передавать в процедуру $find$ параметр, указывающий предыдущее число; в 
 $count$ опять потребуется цикл.
@@ -418,7 +427,8 @@ for j:=2 to nn-1 do begin
     cur:=cur-b[j]*(b[j-1]+b[j+1]);
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Поясню. У нас есть массив $a$, в котором, как всегда, мы храним текущее решение. В
 данном случае "--- последовательность номеров удаляемых чисел. $Ans$ "--- наилучшее
@@ -466,7 +476,8 @@ for j:=2 to nn-1 do begin
     cur:=ocur;
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 обратите внимание, что теперь переменная $x$ не нужна.
 Но в результате может не хватить стека, т.к. каждая копия процедуры $find$ будет хранить свой массив $ob$.
 \item На самом деле нас теперь массив $a$ нужен только для того, чтобы выводить ответ. Если сам 
@@ -497,7 +508,8 @@ for j:=2 to nn-1 do begin
     cur:=ocur;
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 например (или через $insert$ и не хранить $ob$ и $ocur$).
 
@@ -546,7 +558,8 @@ while p^.next<>nil do begin
     inc(j);
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Обратите внимание на то, что элемент удаляется из списка, но не из памяти. Его адрес остаётся в переменной $p$, благодаря чему мы можем его восстановить назад (в этом смысле роль переменной $p$ в некотором смысле похоже на роль переменной $x$ в первоначальной версии реализации). Обычно вставка элемента в список делается немного хитрее, здесь же мы воспользовались тем, что этот элемент там только что был и мы его просто возвращаем на место.
 
@@ -603,7 +616,8 @@ for j:=2 to nn-1 do begin
     s:=s+b[j];{Не забываем ее восстанавливать}
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 
 Если вычислять каждый раз заново:
 
@@ -636,7 +650,8 @@ for j:=2 to nn-1 do begin
        т.к. она нам понадобится при следующем j}
 end;
 end;
-\end{verbatim}\end{codesample}
+\end{verbatim}
+\end{codesample}
 |
 
 На самом деле, как я уже говорил, отсечения можно придумывать до бесконечности. Можно учесть, какой минимальный элемент у нас остался, и умножать не на 2, а на удвоенный этот элемент и т.д. Главное, не запутаться в этих отсечениях, нигде не ошибиться, не опоздать решить другую задачу :) и не писать отсечения, которые будут все равно неэффективны. Т.е. главное "--- не переборщить.
