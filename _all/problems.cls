@@ -47,6 +47,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{framed}
 \RequirePackage{verbatim}
+%\RequirePackage[dvipdfmx]{hyperref}
 
 % Main Code
 \columnseprule=0.4pt
